@@ -11,6 +11,7 @@ object FakeData {
     private fun initialStory() {
         stories.add(
             Story(
+                1,
                 "John Smith",
                 "https://holosen.net/wp-content/uploads/2021/09/story-01.jpg",
                 true
@@ -18,6 +19,7 @@ object FakeData {
         )
         stories.add(
             Story(
+                2,
                 "Mehrad",
                 "https://holosen.net/wp-content/uploads/2021/09/story-06.jpeg",
                 false
@@ -25,6 +27,7 @@ object FakeData {
         )
         stories.add(
             Story(
+                3,
                 "Lucy Baker",
                 "https://holosen.net/wp-content/uploads/2021/09/story-02.jpeg",
                 false
@@ -32,6 +35,7 @@ object FakeData {
         )
         stories.add(
             Story(
+                4,
                 "Tony",
                 "https://holosen.net/wp-content/uploads/2021/09/story-03.jpeg",
                 false
@@ -39,6 +43,7 @@ object FakeData {
         )
         stories.add(
             Story(
+                5,
                 "Anna Stark",
                 "https://holosen.net/wp-content/uploads/2021/09/story-04.jpeg",
                 false
@@ -46,6 +51,7 @@ object FakeData {
         )
         stories.add(
             Story(
+                6,
                 "Brayan",
                 "https://holosen.net/wp-content/uploads/2021/09/story-05.jpeg",
                 false

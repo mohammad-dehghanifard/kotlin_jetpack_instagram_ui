@@ -11,7 +11,6 @@ import ir.dehghanifard.kotlin_jetpack_instagram_ui.components.PostView
 import ir.dehghanifard.kotlin_jetpack_instagram_ui.components.StoryViw
 import ir.dehghanifard.kotlin_jetpack_instagram_ui.data.FakeData
 import ir.dehghanifard.kotlin_jetpack_instagram_ui.ui.theme.LightGray
-import ir.dehghanifard.kotlin_jetpack_instagram_ui.ui.theme.RedColor
 
 @Composable
 fun HomeScreen() {
