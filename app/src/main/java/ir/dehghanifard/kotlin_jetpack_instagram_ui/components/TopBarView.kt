@@ -25,7 +25,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ir.dehghanifard.kotlin_jetpack_instagram_ui.ui.theme.Purple40
 
-@Preview
 @Composable
 fun TopBarView() {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(10.dp)) {
