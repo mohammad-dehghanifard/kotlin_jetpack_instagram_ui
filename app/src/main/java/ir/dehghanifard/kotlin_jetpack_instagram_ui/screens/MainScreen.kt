@@ -14,7 +14,7 @@ fun MainScreen() {
     val navController = rememberNavController()
     Scaffold(
         topBar = { HomeAppBar() },
-        bottomBar = { ButtonNavigation() }
+        bottomBar = { ButtonNavigation(navController) }
     ) {
         NavHost(
            modifier = Modifier.padding(it),
