@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import ir.dehghanifard.kotlin_jetpack_instagram_ui.R
@@ -27,16 +29,17 @@ import ir.dehghanifard.kotlin_jetpack_instagram_ui.ui.theme.Purple80
 import ir.dehghanifard.kotlin_jetpack_instagram_ui.ui.theme.RedColor
 
 @Composable
-fun  StoryViw(storyList : ArrayList<Story> ) {
+fun  StoryViw(storyList : ArrayList<Story>,navController: NavController) {
     LazyRow(
         modifier = Modifier.padding(10.dp)
     ){
-        items(storyList.size) { index -> StoryItem(story = storyList[index]) }
+        items(storyList.size) { index -> StoryItem(story = storyList[index],navController = navController) }
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun StoryItem(story: Story) {
+fun StoryItem(story: Story,navController: NavController) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         // user image
         Box(
@@ -45,6 +48,7 @@ fun StoryItem(story: Story) {
                 .padding(8.dp)
         ) {
             Card(
+                onClick = { navController.navigate("showStory/${story.id}") },
                 shape = RoundedCornerShape(50),
                 border = BorderStroke(width = 2.dp, color = if(story.isLive) RedColor else Purple80)
             ) {
