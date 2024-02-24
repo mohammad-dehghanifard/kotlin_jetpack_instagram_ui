@@ -7,13 +7,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ir.dehghanifard.kotlin_jetpack_instagram_ui.components.ButtonNavigation
-import ir.dehghanifard.kotlin_jetpack_instagram_ui.components.HomeAppBar
+import ir.dehghanifard.kotlin_jetpack_instagram_ui.components.TopBarView
 
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
     Scaffold(
-        topBar = { HomeAppBar() },
+        topBar = { TopBarView() },
         bottomBar = { ButtonNavigation(navController) }
     ) {
         NavHost(
